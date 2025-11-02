@@ -16,8 +16,8 @@ Exiftract is a simple, dark-theme GUI tool built with Python and Tkinter. It all
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/exiftract.git](https://github.com/your-username/exiftract.git)
-    cd exiftract
+    git clone https://github.com/agent-rxd/Exiftract.git
+    cd Exiftract
     ```
 
 2.  **Create a virtual environment:**
@@ -37,7 +37,7 @@ Exiftract is a simple, dark-theme GUI tool built with Python and Tkinter. It all
 
 1.  Run the script:
     ```bash
-    python3 exiftract.py
+    python3 Exiftract.py
     ```
 2.  Click **"Browse..."** to select an image file.
 3.  Click **"Scan Selected Image"** to extract and display the metadata.
