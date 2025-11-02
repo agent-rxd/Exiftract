@@ -1,4 +1,4 @@
-# Exiftract
+# Exiftract 👾
 
 Exiftract is a simple, dark-theme GUI tool built with Python and Tkinter. It allows you to load an image (`.jpg`, `.jpeg`, `.tiff`) and instantly extract all its EXIF (Exchangeable Image File Format) metadata.
 
