@@ -168,31 +168,25 @@ class ExiftractGUI:
                         if len(value) > 100:
                             value = value[:100] + "..."
                     self.tree.insert("", "end", values=(f"{tag_name}", f"{value}"))
-            
             self.status_var.set(f"Successfully extracted all metadata.")
-
         except Image.UnidentifiedImageError:
             self.status_var.set("Error: Cannot identify image file.")
             messagebox.showerror("Error", "The selected file is not a valid image.")
         except Exception as e:
             self.status_var.set(f"An error occurred: {e}")
             messagebox.showerror("Error", f"An unexpected error occurred:\n{e}")
-
     def save_report(self):
         if not self.tree.get_children():
             messagebox.showwarning("Empty Report", "There is no metadata to save.")
             return
-
         file_path = filedialog.asksaveasfilename(
             title="Save Report As",
             defaultextension=".txt",
             initialfile="exiftract_report.txt",
             filetypes=(("Text Files", "*.txt"), ("All Files", "*.*"))
         )
-        
         if not file_path:
             return
-
         try:
             with open(file_path, 'w', encoding='utf-8') as f:
                 f.write(f"--- Exiftract Metadata Report ---\n")
@@ -205,14 +199,11 @@ class ExiftractGUI:
                         tag = data[0]
                         value = data[1]
                         f.write(f"{tag}: {value}\n")
-            
             self.status_var.set(f"Report saved to {file_path.split('/')[-1]}")
             messagebox.showinfo("Success", f"Report saved successfully to:\n{file_path}")
-            
         except Exception as e:
             self.status_var.set(f"Error saving file: {e}")
             messagebox.showerror("Error", f"Could not save file: {e}")
-
 if __name__ == "__main__":
     app_root = tk.Tk()
     gui = ExiftractGUI(app_root)
