@@ -39,6 +39,6 @@ Exiftract is a simple, dark-theme GUI tool built with Python and Tkinter. It all
     ```bash
     python3 Exiftract.py
     ```
-2.  Click **"Browse..."** to select an image file.
+2.  Click **"Browse..."** to select an image.
 3.  Click **"Scan Selected Image"** to extract and display the metadata.
 4.  Click **"Save Report as .txt"** to save the results.
